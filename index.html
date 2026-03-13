@@ -7,270 +7,321 @@
 <title>EcoSwap BD</title>
 
 <style>
-
 /* ===== General ===== */
-body{
-margin:0;
-font-family: Arial;
-scroll-behavior: smooth;
-background:#f5fff5;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  background: #f5fff5;
 }
 
 /* ===== Header ===== */
-header{
-background:#1b5e20;
-color:white;
-padding:20px;
-text-align:center;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+header {
+  background: #1b5e20;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.logo{
-font-size:28px;
-font-weight:bold;
+.logo {
+  font-size: 28px;
+  font-weight: bold;
 }
 
 /* ===== Navigation ===== */
-nav{
-background:#2e7d32;
-text-align:center;
-padding:10px 0;
-position:sticky;
-top:80px;
-z-index:999;
+nav {
+  background: #2e7d32;
+  text-align: center;
+  padding: 10px 0;
+  position: sticky;
+  top: 80px;
+  z-index: 999;
 }
 
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
+nav a {
+  color: white;
+  margin: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-nav a:hover{
-color:#a5d6a7;
+nav a:hover {
+  color: #a5d6a7;
 }
 
 /* ===== Hero ===== */
-.hero{
-padding:100px 20px;
-text-align:center;
-color:white;
-background-image:url("images/background.jpg");
-background-size:cover;
-background-position:center;
-position:relative;
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
-text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
-.hero p{
-font-size:20px;
-margin-bottom:30px;
-text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 /* ===== Sections ===== */
-section{
-padding:60px 20px;
-text-align:center;
+section {
+  padding: 60px 20px;
+  text-align: center;
 }
 
 /* ===== Cards ===== */
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.card{
-background:white;
-margin:15px;
-padding:20px;
-width:250px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.15);
-transition:0.3s;
+.card {
+  background: white;
+  margin: 15px;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: 0.3s;
 }
 
-.card:hover{
-transform: translateY(-10px);
-box-shadow:0 8px 20px rgba(0,0,0,0.25);
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 /* ===== Gallery ===== */
-.gallery img{
-width:250px;
-margin:10px;
-border-radius:10px;
-transition:0.3s;
+.gallery img {
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Points / Lists ===== */
+ul {
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* ===== Animated Counters ===== */
+.counter {
+  font-size: 32px;
+  color: #2e7d32;
+  font-weight: bold;
 }
 
 /* ===== Forms ===== */
-form{
-max-width:400px;
-margin:auto;
+form {
+  max-width: 400px;
+  margin: auto;
 }
 
-input, textarea{
-width:100%;
-padding:10px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:5px;
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 /* ===== Buttons ===== */
-button{
-padding:12px 25px;
-border:none;
-background:#2e7d32;
-color:white;
-font-size:16px;
-cursor:pointer;
-margin:10px;
-border-radius:5px;
-transition:0.3s;
+button, .apply-btn {
+  padding: 12px 25px;
+  border: none;
+  background: #2e7d32;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
-button:hover{
-background:#1b5e20;
+button:hover, .apply-btn:hover {
+  background: #1b5e20;
 }
 
 /* ===== Footer ===== */
-footer{
-background:#1b5e20;
-color:white;
-text-align:center;
-padding:20px;
+footer {
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Floating WhatsApp ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* ===== Responsive ===== */
 @media(max-width:768px){
-.cards{
-flex-direction:column;
-align-items:center;
+  .cards{
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery img{
+    width:80%;
+  }
+  ul{
+    text-align:center;
+  }
 }
-
-.gallery img{
-width:80%;
-}
-}
-
 </style>
-
 </head>
 
 <body>
 
 <header>
-<div class="logo">🌱 EcoSwap BD</div>
-<p>Exchange • Reuse • Revive</p>
+  <div class="logo">🌱 EcoSwap BD</div>
+  <p>Exchange • Reuse • Revive</p>
 </header>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#how">How it Works</a>
-<a href="#programs">Programs</a>
-<a href="#gallery">Gallery</a>
-<a href="#join">Join</a>
-<a href="#contact">Contact</a>
+  <a href="#home">Home</a>
+  <a href="#how">How it Works</a>
+  <a href="#programs">Programs</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#donate">Donate</a>
+  <a href="#join">Join</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<!-- ===== Home Section ===== -->
+<!-- ===== Hero Section ===== -->
 <section id="home" class="hero">
-<h1>Reduce Plastic Waste</h1>
-<p>EcoSwap is an environmental initiative encouraging people to exchange reusable items and reduce plastic pollution.</p>
-<button onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Join Us</button>
-<button onclick="alert('Donate functionality coming soon!')">Donate</button>
+  <h1>Reduce Plastic Waste</h1>
+  <p>EcoSwap encourages people to exchange reusable items and reduce plastic pollution in the community.</p>
+  <button onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Join Us</button>
+  <a class="apply-btn" href="#donate">Apply</a>
 </section>
 
 <!-- ===== How it Works ===== -->
 <section id="how">
-<h2>How It Works</h2>
-<div class="cards">
-<div class="card">
-<h3>Collect</h3>
-<p>Collect reusable plastic items.</p>
-</div>
-<div class="card">
-<h3>Submit</h3>
-<p>Submit items to EcoSwap points.</p>
-</div>
-<div class="card">
-<h3>Recycle</h3>
-<p>Items are recycled or reused.</p>
-</div>
-<div class="card">
-<h3>Reward</h3>
-<p>Users earn eco rewards.</p>
-</div>
-</div>
+  <h2>How It Works</h2>
+  <ul>
+    <li>Collect reusable plastic items</li>
+    <li>Register your donation</li>
+    <li>Submit items to EcoSwap</li>
+    <li>Receive free eco rewards</li>
+  </ul>
 </section>
 
-<!-- ===== Programs ===== -->
+<!-- ===== Programs / Points ===== -->
 <section id="programs">
-<h2>Our Programs</h2>
-<div class="cards">
-<div class="card">
-<h3>Plastic Collection Drive</h3>
-<p>Community campaigns to collect plastic waste.</p>
-</div>
-<div class="card">
-<h3>Reuse Exchange</h3>
-<p>Swap reusable items.</p>
-</div>
-<div class="card">
-<h3>Environmental Awareness</h3>
-<p>Workshops about plastic pollution and sustainability.</p>
-</div>
-</div>
+  <h2>Donation Rewards</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Plastic Bottle Donation</h3>
+      <ul>
+        <li>1 activity = 10 bottles collected</li>
+        <li>1 tree planted per 10 bottles</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Plastic Bag Donation</h3>
+      <ul>
+        <li>Donate 10 plastic bags</li>
+        <li>Receive 1 eco-friendly reusable bag</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Donate Workflow ===== -->
+<section id="donate">
+  <h2>Donation Workflow</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="images/collect.jpg" alt="Collect" width="100%">
+      <h4>1. Collect</h4>
+    </div>
+    <div class="card">
+      <img src="images/register.jpg" alt="Register" width="100%">
+      <h4>2. Registration</h4>
+    </div>
+    <div class="card">
+      <img src="images/delivery.jpg" alt="Delivery" width="100%">
+      <h4>3. Submit to EcoSwap</h4>
+    </div>
+    <div class="card">
+      <img src="images/reward.jpg" alt="Reward" width="100%">
+      <h4>4. Receive Free Reward</h4>
+    </div>
+  </div>
 </section>
 
 <!-- ===== Gallery ===== -->
 <section id="gallery">
-<h2>Gallery</h2>
-<div class="gallery">
-<img src="images/plastic1.jpg" alt="Plastic Collection">
-<img src="images/recycle.jpg" alt="Recycling">
-<img src="images/community.jpg" alt="Community">
-</div>
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="images/plastic1.jpg" alt="Plastic Collection">
+    <img src="images/recycle.jpg" alt="Recycling">
+    <img src="images/community.jpg" alt="Community">
+  </div>
 </section>
 
 <!-- ===== Join Form ===== -->
 <section id="join">
-<h2>Join EcoSwap</h2>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea placeholder="Why do you want to join?" required></textarea>
-<button type="submit">Submit</button>
-</form>
+  <h2>Join EcoSwap</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Why do you want to join?" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
 </section>
 
 <!-- ===== Contact ===== -->
 <section id="contact">
-<h2>Contact</h2>
-<p>Email: ecoswapbd@gmail.com</p>
-<p>Founder: MD Shahadat Hossain Sakib</p>
+  <h2>Contact</h2>
+  <p>Email: ecoswapbd@gmail.com</p>
+  <p>Founder: MD Shahadat Hossain Sakib</p>
+  <p>Location: [Your location here]</p>
 </section>
 
 <!-- ===== Footer ===== -->
 <footer>
-<p>© 2026 EcoSwap BD | Environmental Sustainability Project</p>
+  <p>© 2026 EcoSwap BD | Environmental Sustainability Project</p>
 </footer>
+
+<!-- ===== Floating WhatsApp ===== -->
+<a href="https://wa.me/your_number" target="_blank" class="whatsapp-float">💬</a>
 
 </body>
 </html>
