@@ -1,4 +1,4 @@
-```html
+```html id="eco-single-page"
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,29 +8,36 @@
 <title>EcoSwap BD</title>
 
 <style>
-
+/* ===== General ===== */
 body{
-font-family: Arial;
 margin:0;
-background:#f5fff5;
+font-family: Arial;
+scroll-behavior: smooth;
 }
 
+/* ===== Navigation ===== */
 header{
 background:#1b5e20;
 color:white;
 padding:20px;
 text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
-font-size:32px;
+font-size:28px;
 font-weight:bold;
 }
 
 nav{
 background:#2e7d32;
-padding:10px;
 text-align:center;
+padding:10px 0;
+position:sticky;
+top:60px;
+z-index:999;
 }
 
 nav a{
@@ -40,32 +47,19 @@ text-decoration:none;
 font-weight:bold;
 }
 
+/* ===== Hero ===== */
 .hero{
-padding:100px;
+padding:100px 20px;
 text-align:center;
 color:white;
-background-image:url("bd.PNG");
+background-image:url("images/background.jpg"); /* এখানে তোমার ছবি path */
 background-size:cover;
 background-position:center;
 }
-.hero{
-padding:80px;
-text-align:center;
-background:#e8f5e9;
-}
 
-button{
-padding:12px 25px;
-border:none;
-background:#2e7d32;
-color:white;
-font-size:16px;
-cursor:pointer;
-margin:10px;
-}
-
+/* ===== Sections ===== */
 section{
-padding:60px;
+padding:60px 20px;
 text-align:center;
 }
 
@@ -84,12 +78,14 @@ border-radius:10px;
 box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* ===== Gallery ===== */
 .gallery img{
 width:250px;
 margin:10px;
 border-radius:10px;
 }
 
+/* ===== Forms ===== */
 form{
 max-width:400px;
 margin:auto;
@@ -101,6 +97,19 @@ padding:10px;
 margin:10px 0;
 }
 
+/* ===== Buttons ===== */
+button{
+padding:12px 25px;
+border:none;
+background:#2e7d32;
+color:white;
+font-size:16px;
+cursor:pointer;
+margin:10px;
+border-radius:5px;
+}
+
+/* ===== Footer ===== */
 footer{
 background:#1b5e20;
 color:white;
@@ -108,6 +117,10 @@ text-align:center;
 padding:20px;
 }
 
+/* ===== Smooth Scroll Links ===== */
+a{
+cursor:pointer;
+}
 </style>
 
 </head>
@@ -115,138 +128,100 @@ padding:20px;
 <body>
 
 <header>
-
 <div class="logo">🌱 EcoSwap BD</div>
 <p>Exchange • Reuse • Revive</p>
-
 </header>
 
 <nav>
-
-<a href="#">Home</a>
+<a href="#home">Home</a>
 <a href="#how">How it Works</a>
 <a href="#programs">Programs</a>
 <a href="#gallery">Gallery</a>
 <a href="#join">Join</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
-<div class="hero">
-
+<!-- ===== Home Section ===== -->
+<section id="home" class="hero">
 <h1>Reduce Plastic Waste</h1>
+<p>EcoSwap is an environmental initiative encouraging people to exchange reusable items and reduce plastic pollution.</p>
+<button onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Join Us</button>
+<button onclick="alert('Donate functionality coming soon!')">Donate</button>
+</section>
 
-<p>
-EcoSwap is an environmental initiative encouraging people
-to exchange reusable items and reduce plastic pollution.
-</p>
-
-<button>Join Us</button>
-<button>Donate</button>
-
-</div>
-
+<!-- ===== How it Works ===== -->
 <section id="how">
-
 <h2>How It Works</h2>
-
 <div class="cards">
-
 <div class="card">
 <h3>Collect</h3>
 <p>Collect reusable plastic items.</p>
 </div>
-
 <div class="card">
 <h3>Submit</h3>
 <p>Submit items to EcoSwap points.</p>
 </div>
-
 <div class="card">
 <h3>Recycle</h3>
 <p>Items are recycled or reused.</p>
 </div>
-
 <div class="card">
 <h3>Reward</h3>
 <p>Users earn eco rewards.</p>
 </div>
-
 </div>
-
 </section>
 
+<!-- ===== Programs ===== -->
 <section id="programs">
-
 <h2>Our Programs</h2>
-
 <div class="cards">
-
 <div class="card">
 <h3>Plastic Collection Drive</h3>
-<p>Community plastic cleanup campaigns.</p>
+<p>Community campaigns to collect plastic waste.</p>
 </div>
-
 <div class="card">
 <h3>Reuse Exchange</h3>
 <p>Swap reusable items.</p>
 </div>
-
 <div class="card">
-<h3>Eco Education</h3>
-<p>Workshops about plastic pollution.</p>
+<h3>Environmental Awareness</h3>
+<p>Workshops about plastic pollution and sustainability.</p>
 </div>
-
 </div>
-
 </section>
 
+<!-- ===== Gallery ===== -->
 <section id="gallery">
-
 <h2>Gallery</h2>
-
 <div class="gallery">
-
-<img src="images/plastic1.jpg">
-<img src="images/recycle.jpg">
-<img src="images/community.jpg">
-
+<img src="images/plastic1.jpg" alt="Plastic Collection">
+<img src="images/recycle.jpg" alt="Recycling">
+<img src="images/community.jpg" alt="Community">
 </div>
-
 </section>
 
+<!-- ===== Join Form ===== -->
 <section id="join">
-
 <h2>Join EcoSwap</h2>
-
 <form>
-
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Your Email">
-
-<textarea placeholder="Why do you want to join?"></textarea>
-
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Why do you want to join?" required></textarea>
 <button type="submit">Submit</button>
-
 </form>
-
 </section>
 
+<!-- ===== Contact ===== -->
 <section id="contact">
-
 <h2>Contact</h2>
-
 <p>Email: ecoswapbd@gmail.com</p>
-
 <p>Founder: MD Shahadat Hossain Sakib</p>
-
 </section>
 
+<!-- ===== Footer ===== -->
 <footer>
-
-<p>© 2026 EcoSwap BD</p>
-
+<p>© 2026 EcoSwap BD | Environmental Sustainability Project</p>
 </footer>
 
 </body>
