@@ -4,71 +4,122 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EcoSwap - Home</title>
-<!-- Bootstrap CSS -->
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    margin:0;
-    padding:0;
-    background-color: #e0f7e9; /* light green background for white spaces */
+body{
+  font-family:'Poppins',sans-serif;
+  margin:0;
+  padding:0;
+  background:#e0f7e9;
 }
 
 /* Navbar */
-.navbar { background-color: #2e7d32; }
-.navbar .nav-link, .navbar-brand { color: white !important; font-weight:600; }
-.navbar .btn { font-weight:700; }
+.navbar{
+  background:#2e7d32;
+}
+.navbar .nav-link,
+.navbar-brand{
+  color:white !important;
+  font-weight:600;
+}
+.navbar .btn{
+  font-weight:700;
+}
 
 /* Hero Section */
-.hero {
-    background: url('bd.png') center/cover no-repeat;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    text-align: left;
-    padding: 0 50px;
-    color: white;
+.hero{
+  background:url('bd.png') center/cover no-repeat;
+  height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:left;
+  text-align:left;
+  padding:0 50px;
+  color:white;
 }
-.hero h1 { font-size: 2.5rem; font-weight: 1000; }
-.hero p { font-size: 1.1rem; font-weight: 600; margin-bottom:1.5rem; }
+.hero h1{
+  font-size:2.5rem;
+  font-weight:1000;
+  margin-bottom:15px;
+}
+.hero p{
+  font-size:1rem;
+  font-weight:500;
+  margin-bottom:20px;
+}
+.hero .btn{
+  font-weight:700;
+}
 
-/* Section Titles */
-.section-title { font-size:2rem; font-weight:700; margin-bottom:40px; color:#2e7d32; }
+/* Sections */
+.section{
+  padding:60px 20px;
+}
+.section-title{
+  text-align:center;
+  font-weight:700;
+  color:#2e7d32;
+  margin-bottom:40px;
+}
 
 /* Cards */
-.card { border:none; border-radius:15px; box-shadow:0 2px 8px rgba(0,0,0,0.1); margin-bottom:30px; }
-.card-title { font-weight:700; color:#2e7d32; }
-.card-text { font-weight:500; color:#4caf50; }
-
-/* Join Section */
-.join-section { padding:60px 0; }
-.join-section .form-control, .join-section .form-select { border-radius:10px; }
-
-/* Footer */
-.footer { background-color:#2e7d32; color:white; padding:20px 0; text-align:center; }
-.footer a { color:white; margin:0 10px; }
-
-/* Floating WhatsApp */
-.whatsapp-float {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  z-index:999;
-  background-color:#25d366;
-  color:white;
-  border-radius:50%;
-  padding:15px;
-  font-size:24px;
-  text-align:center;
-  cursor:pointer;
+.card{
+  border:none;
+  border-radius:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+.card-title{
+  font-weight:700;
+  color:#2e7d32;
+}
+.card-text{
+  font-weight:500;
+  color:#555;
 }
 
-/* Responsive */
+/* Gallery preview */
+.gallery-img{
+  width:100%;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+.gallery-img:hover{
+  transform:scale(1.05);
+}
+
+/* Stats */
+.stats{
+  background:white;
+  padding:40px;
+  border-radius:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+  margin-bottom:50px;
+}
+.stat-number{
+  font-size:2rem;
+  font-weight:700;
+  color:#2e7d32;
+}
+
+/* Footer */
+.footer{
+  background:#2e7d32;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
 @media(max-width:768px){
-    .hero { text-align:center; justify-content:center; padding:0 20px; }
+  .hero{
+    padding:0 20px;
+  }
+  .hero h1{
+    font-size:1.8rem;
+  }
 }
 </style>
 </head>
@@ -76,112 +127,141 @@ body {
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
-<div class="container">
-  <a class="navbar-brand" href="index.html">
-  <img src="logo12.png" alt="EcoSwap Logo" width="50">
-</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
-      <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
-      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-      <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-      <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
-      <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-      <li class="nav-item"><a class="btn btn-danger ms-2" href="join-donate.html">Apply Now</a></li>
-    </ul>
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" width="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="join-donate.html">Join / Donate</a></li>
+        <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="btn btn-danger ms-2" href="join-donate.html">Apply Now</a></li>
+      </ul>
+    </div>
   </div>
-</div>
 </nav>
 
 <!-- Hero Section -->
 <section class="hero">
   <div>
     <h1>Swap Plastic for a Greener Planet!</h1>
-    <p>Turn your plastic bottles and bags into trees and eco-friendly bags – for FREE!</p>
-    <a href="join-donate.html" class="btn btn-success btn-lg me-2">Donate Bottles</a>
-    <a href="join-donate.html" class="btn btn-warning btn-lg text-white">Donate Bags</a>
+    <p>Turn your plastic bottles and bags into trees and eco-friendly rewards – for FREE!</p>
+    <a href="donate-plastic.html" class="btn btn-success btn-lg me-2">Donate Bottles</a>
+    <a href="donate-plastic.html" class="btn btn-warning btn-lg text-white">Donate Bags</a>
   </div>
 </section>
 
-<!-- How It Works Section Summary -->
-<section class="container mt-5">
-<h2 class="section-title text-center">How It Works</h2>
-<div class="row text-center">
-  <div class="col-md-3 mb-4">
-    <img src="s1.png" class="img-fluid mb-2" alt="Step 1">
-    <h5>Collect Plastic</h5>
+<!-- About / Mission Preview -->
+<section class="section">
+  <h2 class="section-title">Our Mission & Vision</h2>
+  <p class="text-center" style="max-width:900px;margin:auto;margin-bottom:50px;color:#444;">
+  EcoSwap is a community-driven environmental initiative to reduce plastic pollution and promote sustainability.
+  We encourage individuals to donate plastic bottles and bags in exchange for eco-friendly rewards like trees and reusable bags.
+  Our vision is a cleaner and greener society, where communities actively participate in protecting the environment.
+  </p>
+  <div class="row text-center g-4 stats">
+    <div class="col-md-3">
+      <div class="stat-number">12,500+</div>
+      <p>Plastic Bottles Collected</p>
+    </div>
+    <div class="col-md-3">
+      <div class="stat-number">4,200+</div>
+      <p>Plastic Bags Recycled</p>
+    </div>
+    <div class="col-md-3">
+      <div class="stat-number">850+</div>
+      <p>Trees Planted</p>
+    </div>
+    <div class="col-md-3">
+      <div class="stat-number">600+</div>
+      <p>Community Members</p>
+    </div>
   </div>
-  <div class="col-md-3 mb-4">
-    <img src="s9.png" class="img-fluid mb-2" alt="Step 2">
-    <h5>Register Online</h5>
-  </div>
-  <div class="col-md-3 mb-4">
-    <img src="s2.png" class="img-fluid mb-2" alt="Step 3">
-    <h5>Drop-off / Pickup</h5>
-  </div>
-  <div class="col-md-3 mb-4">
-    <img src="s4.png" class="img-fluid mb-2" alt="Step 4">
-    <h5>Get Reward</h5>
-  </div>
-</div>
-<div class="text-center mt-3">
-  <a href="how-it-works.html" class="btn btn-success">Learn More</a>
-</div>
 </section>
 
-<!-- Programs Summary -->
-<section class="programs-section">
-<div class="container">
-<h2 class="section-title text-center">Our Programs</h2>
-<div class="row justify-content-center">
-  <div class="col-md-5 mb-4">
-    <div class="card shadow">
-      <img src="11.png" class="card-img-top" alt="Plastic Bottle Program">
-      <div class="card-body text-center">
-        <h5 class="card-title">Plastic Bottle Program</h5>
-        <p class="card-text">1 Activity = 10 Bottles → 1 Tree</p>
-        <a href="join-donate.html" class="btn btn-success">Donate Bottles</a>
+<!-- How It Works Preview -->
+<section class="section">
+  <h2 class="section-title">How It Works</h2>
+  <div class="row text-center g-4">
+    <div class="col-md-3">
+      <img src="images/step1.png" class="gallery-img mb-2">
+      <h5>Collect Plastic</h5>
+    </div>
+    <div class="col-md-3">
+      <img src="images/step2.png" class="gallery-img mb-2">
+      <h5>Register Online</h5>
+    </div>
+    <div class="col-md-3">
+      <img src="images/step3.png" class="gallery-img mb-2">
+      <h5>Drop-off / Pickup</h5>
+    </div>
+    <div class="col-md-3">
+      <img src="images/step4.png" class="gallery-img mb-2">
+      <h5>Get Reward</h5>
+    </div>
+  </div>
+</section>
+
+<!-- Programs Preview -->
+<section class="section">
+  <h2 class="section-title">Our Programs</h2>
+  <div class="row justify-content-center g-4">
+    <div class="col-md-5">
+      <div class="card text-center">
+        <img src="images/bottle.png" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Plastic Bottle Program</h5>
+          <p class="card-text">Donate 10 bottles → 1 Tree</p>
+          <a href="donate-plastic.html" class="btn btn-success">Donate Bottles</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="card text-center">
+        <img src="images/bag.png" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Plastic Bag Program</h5>
+          <p class="card-text">Donate 10 bags → 1 Eco-friendly Bag</p>
+          <a href="donate-plastic.html" class="btn btn-warning text-white">Donate Bags</a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-md-5 mb-4">
-    <div class="card shadow">
-      <img src="2.png" class="card-img-top" alt="Plastic Bag Program">
-      <div class="card-body text-center">
-        <h5 class="card-title">Plastic Bag Program</h5>
-        <p class="card-text">Donate 10 Bags → 1 Eco-Friendly Bag</p>
-        <a href="join-donate.html" class="btn btn-warning text-white">Donate Bags</a>
-      </div>
-    </div>
+</section>
+
+<!-- Gallery Preview -->
+<section class="section">
+  <h2 class="section-title">Gallery Preview</h2>
+  <div class="row g-4">
+    <div class="col-md-4"><img src="images/work1.jpg" class="gallery-img"></div>
+    <div class="col-md-4"><img src="images/work2.jpg" class="gallery-img"></div>
+    <div class="col-md-4"><img src="images/work3.jpg" class="gallery-img"></div>
   </div>
-</div>
-<div class="text-center mt-3">
-  <a href="programs.html" class="btn btn-success">View All Programs</a>
-</div>
-</div>
+</section>
+
+<!-- Join / Donate CTA -->
+<section class="section text-center">
+  <h2 class="section-title">Join Our Mission</h2>
+  <p class="text-center" style="max-width:700px;margin:auto;margin-bottom:20px;">Become a part of EcoSwap and help reduce plastic waste in your community.</p>
+  <a href="join-donate.html" class="btn btn-success btn-lg me-2">Join Now</a>
+  <a href="donate-plastic.html" class="btn btn-warning btn-lg text-white">Donate Plastic</a>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-<p>© 2026 EcoSwap. All rights reserved.</p>
-<div>
-  <a href="#"><img src="facebook.png" width="30" alt="Facebook"></a>
-  <a href="#"><img src="instageram.png" width="30" alt="Instagram"></a>
-  <a href="#"><img src="Twitter.jpg" width="30" alt="Twitter"></a>
-</div>
+  <p>© 2026 EcoSwap. All rights reserved.</p>
 </footer>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/+8801894693479" target="_blank" class="whatsapp-float">💬</a>
-
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
