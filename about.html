@@ -1,117 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | EcoSwap</title>
+<title>EcoSwap - About Us</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 body{
-    font-family: Arial, sans-serif;
-    background:#e0f7e9; /* হালকা গ্রিন ব্যাকগ্রাউন্ড */
+font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+background:#e0f7e9;
 }
 
-.header{
-    background:#2E7D32;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+/* Navbar */
+
+.navbar{
+background:#2e7d32;
 }
 
-.section-title{
-    text-align:center;
-    color:#2E7D32;
-    font-weight:bold;
-    margin-bottom:40px;
+.navbar .nav-link,
+.navbar-brand{
+color:white !important;
+font-weight:600;
 }
 
-.section-content{
-    max-width:800px;
-    margin:0 auto 40px auto;
-    font-size:1rem;
-    line-height:1.6;
-    color:#333;
+/* Hero */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:green;
 }
 
-.btn-custom{
-    border-radius:10px;
-    margin-left:5px;
+.hero h1{
+font-size:2.5rem;
+font-weight:1000;
+}
+
+/* About */
+
+.about-section{
+padding:60px 20px;
+}
+
+.title{
+text-align:center;
+color:#2e7d32;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.text{
+max-width:900px;
+margin:auto;
+text-align:center;
+color:#444;
+margin-bottom:50px;
+}
+
+/* Stats */
+
+.stats{
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.stat-number{
+font-size:2rem;
+font-weight:700;
+color:#2e7d32;
 }
 
 .footer{
-    background:#2E7D32;
-    color:white;
-    padding:20px;
-    text-align:center;
-    margin-top:40px;
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
 }
+
+@media(max-width:768px){
+.hero h1{
+font-size:1.8rem;
+}
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+
 <div class="container">
+
 <a class="navbar-brand" href="index.html">
-  <img src="logo (2).png" alt="EcoSwap Logo" width="50">
+<img src="images/logo.png" width="50">
 </a>
+
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 <span class="navbar-toggler-icon"></span>
 </button>
 
 <div class="collapse navbar-collapse" id="navbarNav">
+
 <ul class="navbar-nav ms-auto">
+
 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
 <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-<li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+
 <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+
+<li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+
+<li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+
 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-<li class="nav-item"><a class="btn btn-success text-white btn-custom" href="join.html">Join Now</a></li>
-<li class="nav-item"><a class="btn btn-warning text-white btn-custom" href="donate.html">Donate</a></li>
+
+<li class="nav-item">
+<a class="btn btn-danger ms-2" href="join-donate.html">Apply Now</a>
+</li>
+
 </ul>
+
 </div>
+
 </div>
+
 </nav>
 
-<!-- Header -->
-<div class="header">
+<!-- Hero -->
+
+<section class="hero">
+
 <h1>About EcoSwap</h1>
-<p>Turning Plastic Waste into a Greener Planet</p>
+
+</section>
+
+<!-- About Text -->
+
+<section class="about-section">
+
+<div class="container">
+
+<h2 class="title">Our Mission</h2>
+
+<p class="text">
+
+EcoSwap is a community-driven environmental initiative focused on reducing plastic pollution and promoting sustainable living.  
+Our mission is to encourage people to recycle plastic waste by exchanging plastic bottles and bags for eco-friendly rewards such as trees and reusable bags.
+
+By creating a simple exchange system, EcoSwap motivates individuals, students, and communities to actively participate in protecting the environment and building a greener future.
+
+</p>
+
+<h2 class="title">Our Vision</h2>
+
+<p class="text">
+
+Our vision is to build a cleaner and greener society where plastic waste is properly managed and reused.  
+Through awareness campaigns, community programs, and plastic collection initiatives, EcoSwap aims to reduce environmental pollution and inspire positive environmental action.
+
+</p>
+
 </div>
 
-<!-- About Section -->
-<section class="container mt-5">
-<h2 class="section-title">Our Mission</h2>
-<div class="section-content">
-<p>EcoSwap is dedicated to reducing plastic waste and promoting environmental sustainability. Our mission is to encourage people to collect and donate plastic bottles and bags so that we can transform them into trees and eco-friendly products. Together, we can make our planet greener and cleaner for future generations.</p>
+</section>
+
+<!-- Impact Statistics -->
+
+<section class="about-section">
+
+<div class="container stats">
+
+<div class="row text-center">
+
+<div class="col-md-3">
+<div class="stat-number">12,500+</div>
+<p>Plastic Bottles Collected</p>
 </div>
 
-<h2 class="section-title">Our Vision</h2>
-<div class="section-content">
-<p>We envision a world where communities actively participate in plastic recycling and sustainability initiatives. By creating reward-based programs, we motivate people to contribute positively to the environment while building awareness about the harmful effects of plastic pollution.</p>
+<div class="col-md-3">
+<div class="stat-number">4,200+</div>
+<p>Plastic Bags Recycled</p>
 </div>
 
-<h2 class="section-title">Our Values</h2>
-<div class="section-content">
-<ul>
-<li>Environmental Responsibility</li>
-<li>Community Engagement</li>
-<li>Education and Awareness</li>
-<li>Transparency and Trust</li>
-<li>Innovation in Sustainability</li>
-</ul>
+<div class="col-md-3">
+<div class="stat-number">850+</div>
+<p>Trees Planted</p>
 </div>
+
+<div class="col-md-3">
+<div class="stat-number">600+</div>
+<p>Community Members</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Team Section -->
+
+<section class="about-section">
+
+<div class="container">
+
+<h2 class="title">Our Team</h2>
+
+<p class="text">
+
+EcoSwap is powered by a passionate team of volunteers who believe in protecting the environment.  
+Our team organizes plastic collection programs, community events, and awareness campaigns to inspire people to reduce plastic waste and support environmental sustainability.
+
+Together, we are working towards a cleaner and healthier planet for future generations.
+
+</p>
+
+</div>
+
 </section>
 
 <!-- Footer -->
-<div class="footer">
-<p>© 2026 EcoSwap | Green Planet Initiative</p>
-</div>
+
+<footer class="footer">
+
+<p>© 2026 EcoSwap. All rights reserved.</p>
+
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
