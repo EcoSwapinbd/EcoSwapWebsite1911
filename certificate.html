@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>EcoSwap Certificate</title>
+
+<style>
+
+body{
+text-align:center;
+font-family:Arial;
+background:#e0f7e9;
+}
+
+.certificate{
+background:white;
+padding:50px;
+margin:50px;
+border:5px solid green;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Generate Certificate</h1>
+
+<input id="name" placeholder="Enter Name">
+
+<button onclick="generate()">Generate</button>
+
+<div class="certificate" id="cert" style="display:none;">
+
+<h2>Certificate of Appreciation</h2>
+
+<p>This certificate is awarded to</p>
+
+<h1 id="username"></h1>
+
+<p>For contributing to EcoSwap Plastic Recycling Program</p>
+
+</div>
+
+<script>
+
+function generate(){
+
+let name=document.getElementById("name").value
+
+document.getElementById("username").innerHTML=name
+
+document.getElementById("cert").style.display="block"
+
+}
+
+</script>
+
+</body>
+</html>
+```
